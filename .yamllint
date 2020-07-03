@@ -6,9 +6,6 @@ yaml-files:
   - '.yamllint'
   - '.ansible-lint'
 
-ignore: |
-  vault.yml
-
 extends: default
 
 rules:
@@ -37,5 +34,6 @@ rules:
     type: unix
   truthy:
     allowed-values: ['yes', 'no']
+    check-keys: no
 
 ...
