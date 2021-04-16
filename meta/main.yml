@@ -14,6 +14,10 @@ galaxy_info:
     - name: ArchLinux
       versions:
         - any
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
 
   galaxy_tags:
     - systemd
