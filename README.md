@@ -18,8 +18,8 @@ Table of Contents
 - [License](#license)
 - [Author Information](#author-information)
 
-
 <!-- tocstop -->
+
 
 Requirements
 ------------
@@ -30,9 +30,14 @@ Requirements
 Role Variables
 --------------
 
-```yml
-systemd_journald_max_retention: '1month'
-```
+Role variables include all supported journald parameters as documented in
+detail at [freedesktop.org][freedesktop/journald] or `man 5 journald.conf`.
+
+Each variable has the `systemd_journald_` prefix, and is named for the
+parameter. For example, the `MaxRetentionSec=` parameter maps to the
+`systemd_journald_maxretensionsec` role variable. Because every parameter of
+journald has an application default value, `journald.conf` starts completely
+commented out, until you choose to override a parameter default.
 
 
 Dependencies
@@ -114,3 +119,4 @@ Centre for Integrative Biodiversity Research (iDiv)][idiv].
 [author]: https://www.idiv.de/en/groups_and_people/employees/details/61.html
 [idiv]: https://www.idiv.de/
 [wookietreiber]: https://github.com/wookietreiber
+[freedesktop/journald](https://www.freedesktop.org/software/systemd/man/journald.conf.html)
