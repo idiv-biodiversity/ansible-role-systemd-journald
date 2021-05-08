@@ -30,11 +30,21 @@ Requirements
 Role Variables
 --------------
 
-Role variables include all supported journald parameters as documented in detail at the [freedesktop.org website](https://www.freedesktop.org/software/systemd/man/journald.conf.html#).
+Role variables include all supported journald parameters as documented in
 
-Each variable has the `systemd_journald_` prefix, and is named for the parameter.  For example, the `MaxRetentionSec=` parameter maps to the `systemd_journald_maxretensionsec` role variable.
+detail at the freedesktop.org website.
 
-Because every parameter has a default, journald.conf starts completely commented out, until you choose to override a parameter default.
+Each variable has the `systemd_journald_` prefix, and is named for the
+
+parameter.  For example, the `MaxRetentionSec=` parameter maps to the
+
+`systemd_journald_maxretensionsec` role variable.
+
+Because every parameter of journald has an application default value,
+
+`journald.conf` starts completely commented out, until you choose to override
+
+a parameter default.
 
 ```yml
 systemd_journald_maxretentionsec: '1month'
@@ -108,6 +118,11 @@ License
 
 MIT
 
+
+Resources
+---------
+
+[freedesktop.org documentation for journald](https://www.freedesktop.org/software/systemd/man/journald.conf.html#)
 
 Author Information
 ------------------
