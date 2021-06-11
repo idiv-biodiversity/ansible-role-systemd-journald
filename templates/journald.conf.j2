@@ -37,61 +37,62 @@ Seal={{ systemd_journald_seal }}
 SplitMode={{ systemd_journald_splitmode }}
 {% else %}
 #SplitMode=uid
-{% endif $}
+{% endif %}
 {% if systemd_journald_syncintervalsec is defined %}
 SyncIntervalSec={{ systemd_journald_syncintervalsec }}
 {% else %}
 #SyncIntervalSec=5m
-{% endif $}
+{% endif %}
 {% if systemd_journald_ratelimitintervalsec is defined %}
 RateLimitIntervalSec={{ systemd_journald_ratelimitintervalsec }}
 {% else %}
 #RateLimitIntervalSec=30s
-{% endif $}
+{% endif %}
 {% if systemd_journald_ratelimitburst is defined %}
 RateLimitBurst={{ systemd_journald_ratelimitburst }}
 {% else %}
 #RateLimitBurst=10000
-{% endif $}
+{% endif %}
 {% if systemd_journald_systemmaxuse is defined %}
 SystemMaxUse={{ systemd_journald_systemmaxuse }}
 {% else %}
 #SystemMaxUse=
-{% endif $}
+{% endif %}
 {% if systemd_journald_systemkeepfree is defined %}
 SystemKeepFree={{ systemd_journald_systemkeepfree }}
 {% else %}
 #SystemKeepFree=
-{% endif $}
+{% endif %}
 {% if systemd_journald_systemmaxfilesize is defined %}
 SystemMaxFileSize={{ systemd_journald_systemmaxfilesize }}
 {% else %}
 #SystemMaxFileSize=
-{% endif $}
+{% endif %}
 {% if systemd_journald_systemmaxfiles is defined %}
 SystemMaxFiles={{ systemd_journald_systemmaxfiles }}
 {% else %}
 #SystemMaxFiles=100
-{% endif $}
+{% endif %}
 {% if systemd_journald_runtimemaxuse is defined %}
 RuntimeMaxUse={{ systemd_journald_runtimemaxuse }}
 {% else %}
 #RuntimeMaxUse=
-{% endif $}
+{% endif %}
 {% if systemd_journald_runtimekeepfree is defined %}
 RuntimeKeepFree={{ systemd_journald_runtimekeepfree }}
 {% else %}
 #RuntimeKeepFree=
-{% endif $}
+{% endif %}
 {% if systemd_journald_runtimemaxfilesize is defined %}
 RuntimeMaxFileSize={{ systemd_journald_runtimemaxfilesize }}
 {% else %}
 #RuntimeMaxFileSize=
-{% endif $}
+{% endif %}
 {% if systemd_journald_runtimemaxfiles is defined %}
 RuntimeMaxFiles={{ systemd_journald_runtimemaxfiles }}
 {% else %}
 #RuntimeMaxFiles=100
+{% endif %}
 {% if systemd_journald_maxretentionsec is defined %}
 MaxRetentionSec={{ systemd_journald_maxretentionsec }}
 {% else %}
@@ -101,69 +102,69 @@ MaxRetentionSec={{ systemd_journald_maxretentionsec }}
 MaxFileSec={{ systemd_journald_maxfilesec }}
 {% else %}
 #MaxFileSec=1month
-{% endif $}
+{% endif %}
 {% if systemd_journald_forwardtosyslog is defined %}
 ForwardToSyslog={{ systemd_journald_ForwardToSyslog }}
 {% else %}
 #ForwardToSyslog=no
-{% endif $}
+{% endif %}
 {% if systemd_journald_forwardtokmsg is defined %}
 ForwardToKMsg={{ systemd_journald_forwardtokmsg }}
 {% else %}
 #ForwardToKMsg=no
-{% endif $}
+{% endif %}
 {% if systemd_journald_forwardtoconsole is defined %}
 ForwardToConsole={{ systemd_journald_forwardtoconsole }}
 {% else %}
 #ForwardToConsole=no
-{% endif $}
+{% endif %}
 {% if systemd_journald_forwardtowall is defined %}
 ForwardToWall={{ systemd_journald_forwardtowall }}
 {% else %}
 #ForwardToWall=yes
-{% endif $}
+{% endif %}
 {% if systemd_journald_ttypath is defined %}
 TTYPath={{ systemd_journald_ttypath }}
 {% else %}
 #TTYPath=/dev/console
-{% endif $}
+{% endif %}
 {% if systemd_journald_maxlevelstore is defined %}
 MaxLevelStore={{ systemd_journald_maxlevelstore }}
 {% else %}
 #MaxLevelStore=debug
-{% endif $}
+{% endif %}
 {% if systemd_journald_maxlevelsyslog is defined %}
 MaxLevelSyslog={{ systemd_journald_maxlevelsyslog }}
 {% else %}
 #MaxLevelSyslog=debug
-{% endif $}
+{% endif %}
 {% if systemd_journald_maxlevelkmsg is defined %}
 MaxLevelKMsg={{ systemd_journald_maxlevelkmsg }}
 {% else %}
 #MaxLevelKMsg=notice
-{% endif $}
+{% endif %}
 {% if systemd_journald_maxlevelconsole is defined %}
 MaxLevelConsole={{ systemd_journald_maxlevelconsole }}
 {% else %}
 #MaxLevelConsole=info
-{% endif $}
+{% endif %}
 {% if systemd_journald_maxlevelwall is defined %}
 MaxLevelWall={{ systemd_journald_maxlevelwall }}
 {% else %}
 #MaxLevelWall=emerg
-{% endif $}
+{% endif %}
 {% if systemd_journald_linemax is defined %}
 LineMax={{ systemd_journald_linemax }}
 {% else %}
 #LineMax=48K
-{% endif $}
+{% endif %}
 {% if systemd_journald_readkmsg is defined %}
 ReadKMsg={{ systemd_journald_readkmsg }}
 {% else %}
 #ReadKMsg=yes
-{% endif $}
+{% endif %}
 {% if systemd_journald_audit is defined %}
 Audit={{ systemd_journald_audit }}
 {% else %}
 #Audit=yes
-{% endif $}
+{% endif %}
