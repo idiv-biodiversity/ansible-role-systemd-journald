@@ -5,15 +5,15 @@ dependencies: []
 galaxy_info:
   role_name: systemd_journald
   author: Christian Krause
-  description: 'install and configure systemd-journald'
+  description: install and configure systemd-journald
   company: German Centre for Integrative Biodiversity Research (iDiv)
   license: MIT
-  min_ansible_version: 2.0
+  min_ansible_version: '2.4'
 
   platforms:
     - name: ArchLinux
       versions:
-        - any
+        - all
     - name: Ubuntu
       versions:
         - bionic
