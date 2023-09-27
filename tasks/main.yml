@@ -1,5 +1,12 @@
 ---
 
+- name: update package cache
+  ansible.builtin.package:
+    update_cache: yes
+  become: yes
+  when:
+    - __systemd_journald_virtualized
+
 - name: install systemd
   ansible.builtin.package:
     name: systemd
