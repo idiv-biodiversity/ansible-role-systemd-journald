@@ -14,9 +14,6 @@
 #
 # See journald.conf(5) for details.
 
-# {{ ansible_managed }}
-
-
 [Journal]
 {% if systemd_journald_storage is defined %}
 Storage={{ systemd_journald_storage }}
