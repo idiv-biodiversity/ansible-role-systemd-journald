@@ -4,6 +4,8 @@ dependencies: []
 
 galaxy_info:
   role_name: systemd_journald
+  namespace: idiv_biodiversity
+
   author: Christian Krause
   description: install and configure systemd-journald
   company: German Centre for Integrative Biodiversity Research (iDiv)
