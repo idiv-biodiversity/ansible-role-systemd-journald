@@ -11,6 +11,7 @@
   ansible.builtin.package:
     name: systemd
     state: present
+  become: yes
 
 - name: configure systemd-journald
   ansible.builtin.template:
