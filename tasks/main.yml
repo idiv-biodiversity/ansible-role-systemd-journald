@@ -19,7 +19,19 @@
     owner: root
     group: root
     mode: 0644
-  notify:
-    - restart systemd-journald
+  become: yes
+  register: __systemd_journald_configuration
+
+- name: enable systemd-journald service and assure it is started
+  ansible.builtin.systemd:
+    name: systemd-journald
+    enabled: yes
+    state: >-
+      {{
+        __systemd_journald_configuration.changed |
+          default(False) |
+          ternary("restarted", "started")
+      }}
+  become: yes
 
 ...
